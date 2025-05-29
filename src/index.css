@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-neutral-100 text-neutral-800;
+  }
+
+  .telugu-text {
+    @apply font-telugu;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 py-16 sm:px-6 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-secondary;
+  }
+  
+  .decorative-border {
+    @apply relative before:absolute before:content-[''] before:left-0 before:right-0 before:h-4 before:bg-[url('https://images.pexels.com/photos/7147160/pexels-photo-7147160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] before:bg-repeat-x before:bg-contain before:opacity-60;
+  }
+  
+  .gold-gradient {
+    @apply bg-gradient-to-r from-primary-light via-primary to-primary-dark bg-clip-text text-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300;
+  }
+  
+  .shine-effect {
+    @apply relative overflow-hidden before:absolute before:inset-0 before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-shimmer;
+  }
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient-move 2s linear infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
