@@ -24,7 +24,7 @@ const MusicPlayer: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      <audio ref={audioRef} src="public/1.mp3" autoPlay loop />
+      <audio ref={audioRef} src="/1.mp3" autoPlay loop />
       <button
         onClick={toggleMute}
         className="bg-white text-primary p-2 rounded-full shadow-lg hover:bg-primary hover:text-white transition"
